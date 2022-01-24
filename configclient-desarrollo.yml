@@ -1,0 +1,4 @@
+server:
+  port: 8090
+some:
+  value: Valor del servidor, yml de git para desarrollo

@@ -1,0 +1,4 @@
+server:
+  port: 8091
+some:
+  value: Valor del servidor, yml de git para test

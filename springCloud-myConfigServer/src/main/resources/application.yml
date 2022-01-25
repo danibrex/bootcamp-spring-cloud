@@ -1,0 +1,44 @@
+#server:
+#  port: 8888
+#spring:
+#  application:
+#    name: config-server
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: https://github.com/ismaelpe/bootCamp-ConfigServer.git
+           #nombre rama git, defecto busca master 
+#          default-label: main
+           #patron de subdirectorios donde puede buscar los ficheros de config, le decimos que los que acaben en service
+#          search-paths:
+#          - '*service*'
+server:
+  port: 8888
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+    #
+      enabled: false
+      server:
+        git:
+          uri: https://github.com/danibrex/bootcamp-spring-cloud
+          default-label: main
+# cliente eureka          
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+      
+management:
+  trace:
+    http:
+      enabled: true
+      include: request-headers,response-headers,cookie-headers,principal,time-taken,authorization-header,remote-address,session-id
+      tracebody: true     
+endpoints:
+  web:
+    exposure:
+      include: "*"

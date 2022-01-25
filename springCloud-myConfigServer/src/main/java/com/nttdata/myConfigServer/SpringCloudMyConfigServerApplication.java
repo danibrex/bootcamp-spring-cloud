@@ -1,0 +1,15 @@
+package com.nttdata.myConfigServer;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.config.server.EnableConfigServer;
+
+@EnableConfigServer
+@SpringBootApplication
+public class SpringCloudMyConfigServerApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringCloudMyConfigServerApplication.class, args);
+	}
+
+}

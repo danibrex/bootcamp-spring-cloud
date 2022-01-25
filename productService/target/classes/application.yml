@@ -1,0 +1,30 @@
+server:
+  port: 8080
+spring:
+  #config:
+    #import: configserver:http://localhost:8888
+    
+  application:
+    name: product-service
+  cloud:
+    config:
+      enabled: false
+      # uri: http://localhost:8888
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+management:
+  trace:
+    http:
+      enabled: true
+      include: request-headers,response-headers,cookie-headers,principal,time-taken,authorization-header,remote-address,session-id
+      tracebody: true
+endpoints:
+  web:
+    exposure:
+      include: "*"
+      
+product:
+  product-name: Zapatillas de Deporte - Modificado por Ismael
